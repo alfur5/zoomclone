@@ -1,0 +1,84 @@
+# ZoomClone — Complete Setup Guide
+
+## ✅ What this app does
+- Real video & audio between actual users (WebRTC — no bots)
+- Admin (teacher) creates a room → gets a Room ID
+- Students enter the Room ID → land in a WAITING ROOM
+- Admin sees student names and clicks ADMIT or DENY for each one
+- Admin can REMOVE or MUTE any student at any time
+- Admin sends REMINDERS to all students or one student
+- Chat, screen sharing, reactions, hand raise, recording timer
+- No time limit. Completely free.
+
+---
+
+## 🚀 DEPLOY IN 2 MINUTES — Railway (Recommended, 100% Free)
+
+1. Go to: https://railway.app
+2. Sign up with GitHub (free)
+3. Click "New Project" → "Deploy from GitHub repo"
+4. Push this folder to a GitHub repo (see below), OR use Railway CLI
+5. Railway auto-detects Node.js, installs, and deploys
+6. You get a live URL like: https://zoomclone-production.up.railway.app
+7. Share that URL with students — they open it in any browser
+
+### Upload to GitHub (quick way):
+1. Go to github.com → New Repository → name it "zoomclone"
+2. Upload all files (drag and drop the zoomapp folder contents)
+3. Connect that repo to Railway
+
+---
+
+## 🚀 ALTERNATIVE: Render (also free)
+
+1. Go to: https://render.com
+2. New → Web Service → connect your GitHub repo
+3. Build Command: `npm install`
+4. Start Command: `node server.js`
+5. Free tier works great
+
+---
+
+## 🖥️ Run on your own computer (for testing)
+
+```
+npm install
+npm start
+```
+Then open: http://localhost:3000
+
+To share with people on the same WiFi network, use your computer's IP:
+http://192.168.1.X:3000
+
+---
+
+## How to use
+
+### Teacher (Admin):
+1. Open the URL → Enter name → "Host a Meeting"
+2. Click "Start Room Now"
+3. You'll see a Room ID (like: A3BZ9X) — share this with students
+4. Students appear in "Waiting Room" panel — click ✓ Admit or ✕ Deny
+5. Use "📢 Remind" panel to send messages to all or one student
+6. Mute or Remove any student using People panel
+7. "End for All" closes the meeting for everyone
+
+### Student:
+1. Open the URL → Enter name → "Join a Meeting"
+2. Enter the Room ID from your teacher → Request to Join
+3. Wait — the page shows "Waiting for Admin"
+4. Once admitted, you enter the meeting
+
+---
+
+## Keyboard shortcuts (in meeting)
+- Alt+A = Mute/Unmute microphone
+- Alt+V = Start/Stop camera
+- Alt+C = Open/Close chat
+
+---
+
+## Files
+- server.js      — Backend (Node.js + Socket.io)
+- public/index.html — Frontend (complete app)
+- package.json   — Node.js config
